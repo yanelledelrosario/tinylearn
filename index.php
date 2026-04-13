@@ -1,8 +1,10 @@
 <?php
 session_start();
 
-if(isset($_SESSION['parent_id'])){
+if (isset($_SESSION['parent_id'])) {
     header("Location: dashboard.php");
-    exit();
+} else {
+    header("Location: login.php");
 }
+exit();
 ?>
